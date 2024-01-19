@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+  
+  
+  
+  
+  <section id="signup" class="d-flex align-items-center justify-content-center" style="height: 100vh; background-color: #000;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5">
+          <div class="info-form" style="background: #333; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);">
+            <h2 style="color: #fff;">Sign Up</h2>
+            <!-- Notice the class 'php-email-form' in the form tag -->
+            <form id="clientForm" action="http://localhost:8080/clients" method="post" onsubmit="return validatePasswords()">
+                <div class="form-group mt-3">
+                  <label for="name" style="color: #fff;">Name <span style="color: red;">*</span></label>
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required style="background-color: #222; color: #fff; border: 1px solid #555;" required>
+                </div>
+                <div class="form-group mt-3">
+                  <label for="email" style="color: #fff;">Email <span style="color: red;">*</span></label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required style="background-color: #222; color: #fff; border: 1px solid #555;" required>
+                </div>
+                <div class="form-group mt-3">
+                  <label for="phone" style="color: #fff;">Phone Number </label>
+                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone Number" required style="background-color: #222; color: #fff; border: 1px solid #555;">
+                </div>
+                <div class="form-group mt-3">
+                  <label for="password" style="color: #fff;">Password <span style="color: red;">*</span></label>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Your Password" required style="background-color: #222; color: #fff; border: 1px solid #555;" required>
+                </div>
+                <div class="form-group mt-3">
+                  <label for="password" style="color: #fff;">Confirm Password<span style="color: red;">*</span></label>
+                  <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm your Password" required style="background-color: #222; color: #fff; border: 1px solid #555;" required>
+                </div>
+                <!-- <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div> -->
+                <div class="text-center">
+                  <button type="submit" style="background: #27a776; color: #fff; border: none; padding: 10px 25px; border-radius: 5px; cursor: pointer; margin-top: 15px;">Sign Up</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ======= Footer ======= -->
+    <!-- (Include the same footer content as in your index.html) -->
+    
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    
+    <div id="preloader">
+      <div class="line"></div>
+    </div>
+    
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+       function validatePasswords() {
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+
+        if (password !== confirmPassword) {
+            alert('Passwords do not match.');
+            return false;
+        }
+        return true;
+    }
+    </script>
+    
+    
+  </body>
+  </html>
+  
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <!-- ... existing head content ... -->
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      
+      <title>PhotoFolio Bootstrap Template - Index</title>
+      <meta content="" name="description">
+      <meta content="" name="keywords">
+      
+      <!-- Favicons -->
+      <link href="assets/img/favicon.png" rel="icon">
+      <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+      
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+      
+      <!-- Vendor CSS Files -->
+      <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+      <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+      
+      <!-- Template Main CSS File -->
+      <link href="assets/css/main.css" rel="stylesheet">
+      
+      <!-- =======================================================
+      * Template Name: PhotoFolio
+      * Updated: Sep 18 2023 with Bootstrap v5.3.2
+      * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
+      * Author: BootstrapMade.com
+      * License: https://bootstrapmade.com/license/
+      ======================================================== -->
+    </head>
+    <body>
+      <!-- ======= Header ======= -->
+      <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+          <!-- ... [Logo and other header content] ... -->
+      
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+            <!-- Uncomment below if you wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <i class="bi bi-camera"></i>
+            <h1>Bakhsh Studios</h1>
+          </a>
+      
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Booking</a></li>
+              
+              <!-- Authentication Links (hidden/shown based on auth status) -->
+              <li class="nav-item">
+                <a href="javascript:void(0)" class="btn btn-sm me-2 logout-btn" style="display: none;" onclick="logOut()">Log Out</a>
+              </li>
+              <li class="nav-item">
+                <a href="profile.html" class="btn btn-sm me-2 profile-btn" style="display: none;">View Profile</a>
+              </li>
+              <li class="nav-item">
+                <a href="login.html" class="btn btn-sm me-2 login-btn">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a href="signup.html" class="btn btn-sm signup-btn">Sign Up</a>
+              </li>
+            </ul>
+          </nav><!-- .navbar -->
+      
+          <div class="header-social-links">
+            <a href="https://twitter.com/i3a6f_" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.facebook.com/tove.bakse" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/i3a6f/" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/atif-bakhsh-b4272921b/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+          </div>
+          <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+          <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      
+        </div>
+      </header><!-- End Header -->
+      <!-- ... existing body content ... -->
+      
+      <section id="signup" class="d-flex align-items-center justify-content-center" style="height: 100vh; background-color: #000;">
+        <!-- ... existing section content ... -->
+        
+          <!-- ... existing form content ... -->
+          
+      </section>
+
+  <!-- ... existing footer content ... -->
+
+  <!-- Vendor JS Files -->
+  <!-- ... existing script tags ... -->
+
+  <!-- Custom Script for Form Submission -->
+  <script>
+ function validatePasswords() {
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+
+        if (password !== confirmPassword) {
+            alert('Passwords do not match.');
+            return false;
+        } else {
+            submitFormData();
+            return false; // Prevent default form submission
+        }
+    }
+
+    function submitFormData() {
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        password: document.getElementById('password').value
+    };
+
+    fetch('http://localhost:8080/clients', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Email already exists!!');
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data && data.message === "Client successfully created.") {
+            // Call loginUser function here
+            loginUser(formData.email, formData.password);
+        } else {
+            // Handle other responses or unsuccessful signup
+            console.error('Signup failed:', data.message);
+        }
+    })
+    .catch(error => {
+        if (error.message.includes('Email already exists')) {
+            alert('Error: Email already exists.');
+        } else {
+            alert('Error during signup: ' + error.message);
+        }
+    });
+}
+
+  
+    function loginUser(email, password) {
+      fetch('http://localhost:8080/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.accessToken) {
+          // Store the JWT token in localStorage
+          localStorage.setItem('jwtToken', data.accessToken);
+  
+          // Redirect to profile page
+          window.location.href = '/index.html';
+        } else {
+          // Handle login failure
+          console.error('Login failed after signup');
+        }
+      })
+      .catch(error => {
+        console.error('Error during login after signup:', error);
+      });
+    }
+
+    function checkAuthStatus() {
+    const token = localStorage.getItem('jwtToken');
+    if (token) {
+      // User is logged in
+      document.querySelector('.logout-btn').style.display = 'inline-block';
+      document.querySelector('.profile-btn').style.display = 'inline-block';
+      document.querySelector('.login-btn').style.display = 'none';
+      document.querySelector('.signup-btn').style.display = 'none';
+    } else {
+      // User is not logged in
+      document.querySelector('.logout-btn').style.display = 'none';
+      document.querySelector('.profile-btn').style.display = 'none';
+      document.querySelector('.login-btn').style.display = 'inline-block';
+      document.querySelector('.signup-btn').style.display = 'inline-block';
+    }
+  }
+
+  function logOut() {
+    localStorage.removeItem('jwtToken');
+    window.location.href = 'index.html';
+  }
+
+  // Check authentication status on page load
+  window.onload = checkAuthStatus;
+  </script>  
+</body>
+</html>
